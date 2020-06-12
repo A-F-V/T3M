@@ -34,3 +34,10 @@ To add a new package, do not use pip directly. Instead, go into ```scripts/setup
 *On Mac/Linux:*
 ```./scripts/run/test_unix.sh```
 
+---
+# Workflow
+
+## Project Kanban
+We will use automated kanban. Please watch:
+https://youtu.be/qRdht9CS_No
+
