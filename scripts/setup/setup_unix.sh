@@ -1,7 +1,8 @@
 #!/bin/bash
 command -v python >/dev/null 2>&1 || { alias python=python3; }
-[[ ! -d "env" ]] && python3 -m venv env
+command -v pip >/dev/null 2>&1 || { alias pip=pip3; }
+[[ ! -d "env" ]] && python -m venv env
 source env/bin/activate
-pip3 install -r scripts/setup/packages.txt
+pip install -r scripts/setup/packages.txt
 ipython kernel install --user --name=env
 deactivate
