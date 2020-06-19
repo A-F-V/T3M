@@ -5,6 +5,6 @@ WHERE pip
 IF %ERRORLEVEL% NEQ 0 doskey pip = pip3
 IF NOT EXIST env (python -m venv env)
 call env\Scripts\activate.bat
-pip install -r scripts/setup/packages.txt
+pip install -r requirements.txt
 ipython kernel install --user --name=env
 deactivate
