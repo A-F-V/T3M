@@ -13,7 +13,7 @@ Open up a command terminal, navigate to the T3M folder using ```cd <path>``` and
 ```./scripts/setup/setup_unix.sh```
 
 ## Adding new packages:
-To add a new package, do not use pip directly. Instead, go into ```scripts/setup/packages.txt``` and add the name of the package there. Then rerun the setup.
+To add a new package, do not use pip directly. Instead, go into ```packages.txt``` and add the name of the package there. Then rerun the setup.
 
 ---
 
