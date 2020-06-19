@@ -1,4 +1,10 @@
+
 # T3M
+- [T3M](#t3m)
+  - [Set up:](#set-up)
+  - [Adding new packages:](#adding-new-packages)
+  - [Workflow](#workflow)
+    - [Project Kanban](#project-kanban)
 ---
 ## Set up:
 
@@ -17,9 +23,9 @@ To add a new package, do not use pip directly. Instead, go into ```requirements.
 
 ---
 
-# Workflow
+## Workflow
 
-## Project Kanban
+### Project Kanban
 We will use automated kanban. Please watch:
 https://youtu.be/qRdht9CS_No
 
