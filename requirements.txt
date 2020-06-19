@@ -5,3 +5,5 @@ jupyter
 sklearn
 pathlib
 pandas
+matplotlib
+seaborn
