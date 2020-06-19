@@ -3,3 +3,5 @@ pytest
 ipykernel
 jupyter
 sklearn
+pathlib
+pandas
