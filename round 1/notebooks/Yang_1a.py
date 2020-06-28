@@ -41,7 +41,7 @@ from sklearn import set_config
 #set_config(display='diagram')
 
 
-
+'''
 data_set = pd.read_csv(training_set_path)
 feature_names = data_set.columns.values
 label_names = ['Survived']
@@ -84,34 +84,34 @@ data_set = data_set.dropna(axis=0)  #gets rid of incomplete rows in dataset
 train_x, train_y = data_set[x_names], data_set['Survived']  #splits dataset into x and y
 #train_x = train_x.dropna(axis=0)    
 #train_y = train_y.dropna(axis=0)
-
+'''
 
 #randomforest
 
 round1a_rf = RandomForestClassifier(random_state = 1)
-round1a_rf.fit(train_x,train_y)
-a = round1a_rf.predict(test_x)
+round1a_rf.fit(training_set_X_trans,training_set_Y)
+a = round1a_rf.predict(test_set_X_trans)
 
 #ridgeclassification
 round1a_rc = RidgeClassifier(random_state=1)
-round1a_rc.fit(train_x,train_y)
-b = round1a_rc.predict(test_x)
+round1a_rc.fit(training_set_X_trans,training_set_Y)
+b = round1a_rc.predict(test_set_X_trans)
 
 #svm
 round1a_svm = svm.SVC(random_state=1)
-round1a_svm.fit(train_x, train_y)
-c = round1a_svm.predict(test_x)
+round1a_svm.fit(training_set_X_trans, training_set_Y)
+c = round1a_svm.predict(test_set_X_trans)
 
 
 #MLPclassifier
 round1a_mlp = MLPClassifier(random_state=1)
-round1a_mlp.fit(train_x, train_y)
-d = round1a_mlp.predict(test_x)
+round1a_mlp.fit(training_set_X_trans, training_set_Y)
+d = round1a_mlp.predict(test_set_X_trans)
 
 #Perceptron
 round1a_perc = Perceptron(random_state=1)
-round1a_perc.fit(train_x, train_y)
-e = round1a_perc.predict(test_x)
+round1a_perc.fit(training_set_X_trans, training_set_Y)
+e = round1a_perc.predict(test_set_X_trans)
 #print(e)
 
 #voting
@@ -120,3 +120,5 @@ print(len(vote), '\n', type(vote))
 votedf = pd.DataFrame(data=vote, columns = ['Survived'])
 votedf.to_excel('predictions.xlsx')
 
+
+print(vote.score(test_set_X_trans, test_set_Y))
