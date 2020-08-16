@@ -10,7 +10,7 @@ def split_tvt_set(data, ratio, seed=-1):
     numpy.random.seed(seed)
     indices = numpy.random.permutation(len(data))
     return data.iloc[indices[0:train_size]], data.iloc[indices[train_size:train_size + validation_size]], data.iloc[
-        indices[test_size:]]
+        indices[train_size + validation_size:]]
 
 
 def split_from_labels(data, labels, axis=1):
